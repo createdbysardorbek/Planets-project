@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+button,
+input {
+    border: 0;
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    margin: 0;
+}
+
+@mixin forTexts($foFamily, $foWeight, $foSize, $color) {
+    font-family: $foFamily;
+    font-weight: $foWeight;
+    font-size: $foSize;
+    color: $color;
+}
