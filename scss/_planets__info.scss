@@ -1,0 +1,208 @@
+.planets__info {
+    display: flex;
+    width: 1110px;
+    height: fit-content;
+    margin: 0 auto;
+
+    .bottom__info2 {
+        display: none;
+    }
+
+    .planets__img {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        padding-top: 187px;
+    }
+
+    .planets__info {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100%;
+        padding-top: 126px;
+
+        .information {
+            width: 350px;
+            height: fit-content;
+
+            .top__info {
+                h2 {
+                    @include forTexts ('Antonio', 400, 80px, #FFFFFF);
+                    text-transform: uppercase;
+                    margin-bottom: 23px;
+                }
+
+                p {
+                    @include forTexts ('Sparton', 400, 14px, #FFFFFF);
+                    line-height: 25px;
+                    margin-bottom: 24px;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 39px;
+
+                    @include forTexts('Spartan', 400, 14px, #FFFFFF);
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+
+                    span {
+                        font-weight: 700;
+                        margin-left: 4px;
+                    }
+
+                    img {
+                        margin-left: 8px;
+                    }
+                }
+            }
+
+            .bottom__info {
+                display: block;
+
+                article {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding: 12px 28px;
+                    box-sizing: border-box;
+                    text-transform: uppercase;
+                    letter-spacing: 2.57143px;
+                    transition: .3s;
+                    border: 1px solid #FFFFFF;
+
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+
+                    &:hover {
+                        background: #D8D8D8;
+                    }
+
+                    h3 {
+                        @include forTexts ('Spartan', 700, 12px, #FFFFFF);
+                        mix-blend-mode: normal;
+                        opacity: 0.5;
+                        margin-right: 28px;
+                    }
+
+                    span {
+                        @include forTexts ('Spartan', 700, 12px, #FFFFFF);
+                    }
+                }
+
+                article.active {
+                    background-color: #EDA249;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1110px) {
+    .planets__info {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .planets__info {
+        flex-direction: column;
+
+        .planets__img {
+            width: 100%;
+            padding-top: 146px;
+            padding-bottom: 130px;
+        }
+
+        .planets__info {
+            width: 100%;
+            padding-top: 0;
+
+
+
+
+            .information {
+                display: flex;
+                justify-content: space-between;
+                width: 689px;
+                height: fit-content;
+                margin: 0 auto;
+
+                .top__info {
+                    width: 50%;
+                }
+
+                .bottom__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 50%;
+                    align-self: center;
+
+                    article {
+                        width: 281px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .planets__info {
+
+        .bottom__info2 {
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+
+            article {
+
+                span {
+                    @include forTexts ('Spartan', 700, 9px, #FFFFFF);
+                    text-align: center;
+                    letter-spacing: 1.92857px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .planets__info {
+            .information {
+                width: 100%;
+
+                .top__info {
+                    width: 100%;
+
+                    h2 {
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+
+                    div {
+                        justify-content: center;
+                    }
+                }
+
+                .bottom__info {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
