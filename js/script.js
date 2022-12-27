@@ -1,5 +1,4 @@
 const nav = document.querySelector('.header__navigation ul');
-console.log(nav);
 
 nav.addEventListener('click', (e) => {
     if (e.target.dataset.planet) {
@@ -29,7 +28,7 @@ nav.addEventListener('click', (e) => {
                                 <h2>${planet.name}</h2>
                                 <p>${planet.overview.content}</p>
                                 <div>
-                                    Source: <span><a src=${planet.overview.source}>Wikipedia</a></span> <img src="./assets/icon-source.svg" alt="source">
+                                    Source: <a href=${planet.overview.source} target="_blank"> Wikipedia </a> <img src="./assets/icon-source.svg" alt="source">
                                 </div>
                             </div>
                             <div class="bottom__info">
@@ -55,15 +54,15 @@ nav.addEventListener('click', (e) => {
                         <span>${planet.rotation}</span>
                     </article>
                     <article>
-                        <h6>ROTATION TIME</h6>
+                        <h6>Revolution TIME</h6>
                         <span>${planet.revolution}</span>
                     </article>
                     <article>
-                        <h6>ROTATION TIME</h6>
+                        <h6>Radius</h6>
                         <span>${planet.radius}</span>
                     </article>
                     <article>
-                        <h6>ROTATION TIME</h6>
+                        <h6>Average temp</h6>
                         <span>${planet.temperature}</span>
                     </article>
                 </div>

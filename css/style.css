@@ -186,6 +186,10 @@ header .header__content .toggle .toggler::after {
   height: 100%;
   padding-top: 187px;
 }
+.planets__info .planets__img img {
+  width: 400px;
+  height: 400px;
+}
 .planets__info .planets__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,9 +238,11 @@ header .header__content .toggle .toggler::after {
   mix-blend-mode: normal;
   opacity: 0.5;
 }
-.planets__info .planets__info .information .top__info div span {
+.planets__info .planets__info .information .top__info div a {
   font-weight: 700;
   margin-left: 4px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 .planets__info .planets__info .information .top__info div img {
   margin-left: 8px;
@@ -388,6 +394,11 @@ header .header__content .toggle .toggler::after {
   }
   .planets__info .planets__info .information .bottom__info {
     display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .planets__info .planets__img img {
+    width: 100%;
   }
 }
 .planets__description {
