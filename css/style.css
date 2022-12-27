@@ -170,6 +170,7 @@ header .header__content .toggle .toggler::after {
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto;
+  margin-bottom: 87px;
 }
 .planets__info .bottom__info2 {
   display: none;
@@ -388,4 +389,44 @@ header .header__content .toggle .toggler::after {
   .planets__info .planets__info .information .bottom__info {
     display: none;
   }
+}
+.planets__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1110px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+.planets__description article {
+  width: 255px;
+  padding: 25px;
+  border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.planets__description article h6 {
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin: 0;
+  margin-bottom: 4px;
+}
+.planets__description article span {
+  font-family: "Antonio";
+  font-weight: 400;
+  font-size: 40px;
+  color: #FFFFFF;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
