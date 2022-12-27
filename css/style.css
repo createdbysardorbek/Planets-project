@@ -266,12 +266,15 @@ header .header__content .toggle .toggler::after {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border: 1px solid #FFFFFF;
+  cursor: pointer;
 }
 .planets__info .planets__info .information .bottom__info article:not(:last-child) {
   margin-bottom: 16px;
 }
 .planets__info .planets__info .information .bottom__info article:hover {
   background: #D8D8D8;
+  mix-blend-mode: normal;
+  opacity: 0.2;
 }
 .planets__info .planets__info .information .bottom__info article h3 {
   font-family: "Spartan";
@@ -287,9 +290,6 @@ header .header__content .toggle .toggler::after {
   font-weight: 700;
   font-size: 12px;
   color: #FFFFFF;
-}
-.planets__info .planets__info .information .bottom__info article.active {
-  background-color: #EDA249;
 }
 
 @media only screen and (max-width: 1110px) {

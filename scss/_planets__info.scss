@@ -81,6 +81,7 @@
                     letter-spacing: 2.57143px;
                     transition: .3s;
                     border: 1px solid #FFFFFF;
+                    cursor: pointer;
 
                     &:not(:last-child) {
                         margin-bottom: 16px;
@@ -88,6 +89,8 @@
 
                     &:hover {
                         background: #D8D8D8;
+                        mix-blend-mode: normal;
+                        opacity: 0.2;
                     }
 
                     h3 {
@@ -100,10 +103,6 @@
                     span {
                         @include forTexts ('Spartan', 700, 12px, #FFFFFF);
                     }
-                }
-
-                article.active {
-                    background-color: #EDA249;
                 }
             }
         }
