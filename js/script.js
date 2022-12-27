@@ -1,6 +1,22 @@
+class Resource {
+    _url = 'planets.json';
+
+    getResource = async () => {
+        let res = await fetch(this._url)
+
+        if (!res.ok) {
+            throw new Error(`Quyidagi ${this._url}da ${res.status} xatolik yuzaga keldi`)
+        }
+        return await res.json()
+    }
+}
+
+const sample = new Resource();
+
 const nav = document.querySelector('.header__navigation ul');
+
 function showFirstPlanet() {
-    fetch('planets.json').then(res => res.json()).then(data => {
+    sample.getResource().then(data => {
         let firstPlanet = data.planets[0];
         renderPlanet(firstPlanet)
     })
@@ -74,11 +90,12 @@ function renderPlanet(elem) {
     main.innerHTML = renderHtml;
 
 }
+
 function showPlanet(e) {
     if (e.target.dataset.planet) {
-        fetch('planets.json').then(res => res.json()).then(data => {
+        sample.getResource().then(data => {
             let planet = data.planets.find(elem => elem.name === e.target.dataset.planet);
-            renderPlanet(planet)
+            renderPlanet(planet);
         })
     }
 }
