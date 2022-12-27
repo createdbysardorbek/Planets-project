@@ -429,4 +429,50 @@ header .header__content .toggle .toggler::after {
   color: #FFFFFF;
   letter-spacing: -1.5px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1110px) {
+  .planets__description {
+    width: 100%;
+    padding: 0px 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .planets__description {
+    width: 100%;
+    padding: 0px 16px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .planets__description {
+    width: 100%;
+    gap: 0;
+  }
+  .planets__description article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .planets__description article:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }/*# sourceMappingURL=style.css.map */
