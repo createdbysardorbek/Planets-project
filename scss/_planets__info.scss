@@ -142,6 +142,8 @@
 
                 .top__info {
                     width: 50%;
+
+
                 }
 
                 .bottom__info {
@@ -216,6 +218,16 @@
 
 @media only screen and (max-width: 400px) {
     .planets__info {
+
+        .planets__info{
+            .information {
+                .top__info {
+                    h2 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
         .planets__img {
 
             img {

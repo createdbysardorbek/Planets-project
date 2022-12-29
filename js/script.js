@@ -1,3 +1,6 @@
+
+let main = document.querySelector('main');
+
 class Resource {
     _url = 'planets.json';
 
@@ -24,7 +27,6 @@ function showFirstPlanet() {
 showFirstPlanet()
 
 function renderPlanet(elem) {
-    let main = document.querySelector('main');
     main.innerHTML = ''
     const renderHtml = `
     <div class="planets__info">
