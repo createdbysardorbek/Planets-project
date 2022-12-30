@@ -2,7 +2,7 @@
 let main = document.querySelector('main');
 
 class Resource {
-    _url = 'planets.json';
+    _url = 'https://planets-info-7777.netlify.app/planets.json';
 
     getResource = async () => {
         let res = await fetch(this._url)
