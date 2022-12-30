@@ -5,6 +5,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-image: url("../img/background.jpg");
+  overflow-y: scroll;
+}
+
+body.scroll {
+  overflow: hidden;
 }
 
 ul li {
@@ -28,9 +33,15 @@ ul {
   margin: 0;
 }
 
+.toggle__menu {
+  display: none;
+}
+
 header {
   width: 100%;
-  height: 85px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: transparent;
   border-bottom: 1px solid #FFFFFF;
 }
@@ -94,6 +105,8 @@ header .header__content .header__navigation ul li {
           box-sizing: border-box;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding: 27px 0;
+  box-sizing: border-box;
 }
 header .header__content .header__navigation ul li:hover {
   border-top: 4px solid #419EBB;
@@ -148,14 +161,23 @@ header .header__content .toggle .toggler::after {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  header .header__content .project__name h1 {
+    margin-bottom: 39px;
+  }
 }
 @media only screen and (max-width: 700px) {
+  header {
+    position: relative;
+  }
   header .header__content {
     width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  header .header__content .project__name h1 {
+    margin-bottom: 0;
   }
   header .header__content .header__navigation {
     display: none;
@@ -164,6 +186,80 @@ header .header__content .toggle .toggler::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  header .toggle__menu {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 85px;
+    background: #070724;
+    padding: 44px 32px 0 24px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  header .toggle__menu.active {
+    display: block;
+  }
+  header .toggle__menu ul li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  header .toggle__menu ul li span {
+    font-family: "Spartan";
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+    letter-spacing: 1.36364px;
+    text-transform: uppercase;
+    margin-left: 25px;
+  }
+  header .toggle__menu ul li::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 0;
+    border-radius: 100%;
+  }
+  header .toggle__menu ul li:nth-child(1)::before {
+    background: #DEF4FC;
+  }
+  header .toggle__menu ul li:nth-child(2)::before {
+    background: #F7CC7F;
+  }
+  header .toggle__menu ul li:nth-child(3)::before {
+    background: #545BFE;
+  }
+  header .toggle__menu ul li:nth-child(4)::before {
+    background: #FF6A45;
+  }
+  header .toggle__menu ul li:nth-child(5)::before {
+    background: #ECAD7A;
+  }
+  header .toggle__menu ul li:nth-child(6)::before {
+    background: #FCCB6B;
+  }
+  header .toggle__menu ul li:nth-child(7)::before {
+    background: #65F0D5;
+  }
+  header .toggle__menu ul li:nth-child(8)::before {
+    background: #497EFA;
   }
 }
 .planets__info {
@@ -275,11 +371,6 @@ header .header__content .toggle .toggler::after {
 }
 .planets__info .planets__info .information .bottom__info article:not(:last-child) {
   margin-bottom: 16px;
-}
-.planets__info .planets__info .information .bottom__info article:hover {
-  background: #D8D8D8;
-  mix-blend-mode: normal;
-  opacity: 0.2;
 }
 .planets__info .planets__info .information .bottom__info article h3 {
   font-family: "Spartan";

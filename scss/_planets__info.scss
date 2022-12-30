@@ -87,12 +87,6 @@
                         margin-bottom: 16px;
                     }
 
-                    &:hover {
-                        background: #D8D8D8;
-                        mix-blend-mode: normal;
-                        opacity: 0.2;
-                    }
-
                     h3 {
                         @include forTexts ('Spartan', 700, 12px, #FFFFFF);
                         mix-blend-mode: normal;

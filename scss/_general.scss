@@ -5,6 +5,11 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-image: url('../img/background.jpg');
+    overflow-y: scroll;
+}
+
+body.scroll {
+    overflow: hidden;
 }
 
 ul {
@@ -35,4 +40,8 @@ ul {
     font-weight: $foWeight;
     font-size: $foSize;
     color: $color;
+}
+
+.toggle__menu {
+    display: none;
 }

@@ -103,3 +103,23 @@ function showPlanet(e) {
 }
 
 nav.addEventListener('click', showPlanet)
+
+// Toggle menu
+// ==========================
+
+const toggle = document.querySelector('.toggle');
+const toggleMenu = document.querySelector('.toggle__menu');
+
+toggle.addEventListener('click', () => {
+    toggleMenu.classList.toggle('active');
+    document.querySelector('body').classList.toggle('scroll')
+})
+
+
+const toggleMenuUl = document.querySelector('.toggle__menu ul');
+
+toggleMenuUl.addEventListener('click', showPlanet)
+
+
+
+
